@@ -475,8 +475,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			}
 			break;
 		case "search":
-			chrome.search.query(
-				{text:message.query}
+			chrome.tabs.create(
+				{url: text:message.query}
 			)
 			break;
 		case "restore-new-tab":
